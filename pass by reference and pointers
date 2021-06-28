@@ -1,6 +1,6 @@
 //using pointer as parameter//pass by reference
 void square(int * x);//function declarition //2 int * const x
-int maig(int *x)
+int main(int *x)
 {
     printf("enter a number to square:\n");
 
@@ -15,5 +15,5 @@ int maig(int *x)
 }
 void square(int * x)//2 int * const x
 {
-    *x = (*x) * (*x);//dereferencing the pointer to get the value of it, and muliteyply it by the value of it
+    *x = (*x) * (*x); //dereferencing the pointer to get the value of it, and muliteyply it by the value of it
 }
