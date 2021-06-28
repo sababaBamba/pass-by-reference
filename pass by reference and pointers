@@ -1,0 +1,19 @@
+//using pointer as parameter//pass by reference
+void square(int * x);//function declarition //2 int * const x
+int maig(int *x)
+{
+    printf("enter a number to square:\n");
+
+    int *num = (int *) malloc(sizeof(int));//2 int num;
+    scanf("%d", num); //&num
+    square(num);//pass the address of num//2 &
+
+    printf("the square of the given number is %d\n" , *num);//2 num
+
+
+    return 0;
+}
+void square(int * x)//2 int * const x
+{
+    *x = (*x) * (*x);//dereferencing the pointer to get the value of it, and muliteyply it by the value of it
+}
