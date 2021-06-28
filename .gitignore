@@ -1,52 +1,27 @@
-# Prerequisites
-*.d
+#include <stdio.h>
+#include <stdlib.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+void swap(int *x, int *y)//pass by reference
+{
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
 
-# Linker output
-*.ilk
-*.map
-*.exp
+    return;
+}
+int main()
+{
+    int a = 100;
+    int b = 200;
 
-# Precompiled Headers
-*.gch
-*.pch
+    printf("before swap a = %d\n" , a);
+    printf("before swap b = %d\n" , b);
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+    swap(&a , &b);//calling the function to swap the values//passing the address of a and b!!!
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+    printf("after swap a = %d\n" , a);
+    printf("after swap b = %d\n" , b);//should swap the values
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+    return 0;
+}
